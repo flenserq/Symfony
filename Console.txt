@@ -1,0 +1,40 @@
+// 1. install symfony installer (without composer)
+$ curl -LsS http://symfony.com/installer > symfony.phar
+$ sudo mv symfony.phar /usr/local/bin/symfony
+$ chmod a+x /usr/local/bin/symfony
+
+//create new project
+$ symfony new my_project_name
+
+// 2 .crate new Symfony Application with composer
+//install composer
+
+//install symfony with composer
+$ composer create-project symfony/framework-standard-edition my_project_name
+
+//or
+$ php composer create-project symfony/framework-standard-edition my_project_name
+
+// 3. Various Commands
+// clear cache
+php app/console cache:clear --env=prod --no-debug
+
+// crate Bundle
+php app/console generate:bundle --namespace=Acme/DemoBundle --format=yml
+
+// start stop server
+app/console server:stop
+app/console server:run
+
+
+//install composer dependency:
+
+// - Tools - Composer - Add dependency
+// - Update
+// Manually adjust composer.json
+// Run the command to update your vendors and register the bundles in your AppKernel.php file
+php composer.phar updatey
+
+//FOSUserBundle:
+
+// https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/index.md
